@@ -1,0 +1,30 @@
+{
+	"name": "mezon/gentella",
+	"description": "Adapter of the Gentella template for mezon",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Dodonov Alexey",
+			"email": "alexey@dodonov.pro",
+			"homepage": "http://gdzone.ru",
+			"role": "Founder"
+		}
+	],
+	"require": {
+		"php": ">=7.2.0",
+		"mezon/mezon": ">=1.3.0"
+	},
+	"support": {
+		"email": "alexey@dodonov.pro",
+		"issues": "https://github.com/alexdodonov/gentella/issues",
+		"source": "https://github.com/alexdodonov/gentella"
+	},
+	"minimum-stability": "dev",
+	"homepage": "https://github.com/alexdodonov/gentella",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"Mezon\\Gentella\\": ""
+		}
+	}
+}

@@ -11,10 +11,14 @@ namespace Mezon\Gentella;
  * @copyright Copyright (c) 2019, aeon.org
  */
 
+// TODO add dependencies to composer.json
+// TODO add dependency https://github.com/ColorlibHQ/gentelella/releases/tag/1.4.0
+// TODO add static pages wich were lost somewhere
+
 /**
  * Template class
  */
-class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
+class GentellaTemplate extends \Mezon\Application\HtmlTemplate
 {
 
     /**
@@ -44,9 +48,8 @@ class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
         $content = '<div class="x_content" style="margin: 0; padding: 0;">';
         $content .= '<div class="alert ' . $msgType . ' alert-dismissible fade in" role="alert">';
         $content .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
-        $content .= '<span aria-hidden="true">×</span></button>' . $message . '</div></div>';
 
-        return $content;
+        return $content.'<span aria-hidden="true">×</span></button>' . $message . '</div></div>';
     }
 
     /**

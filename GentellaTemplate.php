@@ -11,14 +11,12 @@ namespace Mezon\Gentella;
  * @copyright Copyright (c) 2019, aeon.org
  */
 
-// TODO add dependencies to composer.json
 // TODO add dependency https://github.com/ColorlibHQ/gentelella/releases/tag/1.4.0
-// TODO add static pages wich were lost somewhere
 
 /**
  * Template class
  */
-class GentellaTemplate extends \Mezon\Application\HtmlTemplate
+class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
 {
 
     /**

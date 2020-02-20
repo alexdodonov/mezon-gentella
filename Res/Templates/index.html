@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/ico" href="{favicon-path}">
+
+<title>{title}</title>
+
+<!-- Bootstrap -->
+<link
+	href="{mezon-http-path}/vendor/gentella-template/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Font Awesome -->
+<link
+	href="{mezon-http-path}/vendor/gentella-template/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet">
+<!-- NProgress -->
+<link
+	href="{mezon-http-path}/vendor/gentella-template/nprogress/nprogress.css"
+	rel="stylesheet">
+<!-- bootstrap-daterangepicker -->
+<link
+	href="{mezon-http-path}/vendor/gentella-template/bootstrap-daterangepicker/daterangepicker.css"
+	rel="stylesheet">
+<!-- Switchery -->
+<link
+	href="{mezon-http-path}/vendor/gentella-template/switchery/dist/switchery.min.css"
+	rel="stylesheet">
+<!-- Custom Theme Style -->
+<link
+	href="{mezon-http-path}/vendor/gentella-template/build/css/custom.min.css"
+	rel="stylesheet">
+<!-- FastSelect Style -->
+<link
+	href="{mezon-http-path}/vendor/gentella-template/fastselect/fastselect.css"
+	rel="stylesheet">
+
+<!-- jQuery -->
+<script
+	src="{mezon-http-path}/vendor/gentella-template/jquery/dist/jquery.min.js"></script>
+<!-- Switchery -->
+<script
+	src="{mezon-http-path}/vendor/gentella-template/switchery/dist/switchery.min.js"></script>
+</head>
+
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<div class="col-md-3 left_col">
+				<div class="left_col scroll-view">
+					<div class="navbar nav_title" style="border: 0;">
+						<a href="{service-http-path}" class="site_title"><span>{system-title}</span></a>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<!-- menu profile quick info -->
+					<div class="profile clearfix">
+						<!--div class="profile_pic">
+                <img src="{mezon-http-path}/vendor/gentella-template/res/images/img.jpg" alt="..." class="img-circle profile_img">
+              </div-->
+						<div class="profile_info">
+							<span>Добро пожаловать,</span>
+							<h2>{session-user-login}</h2>
+						</div>
+					</div>
+					<!-- /menu profile quick info -->
+
+					<br />
+
+					<!-- sidebar menu -->
+					<div id="sidebar-menu"
+						class="main_menu_side hidden-print main_menu">
+						<div class="menu_section">{menu}</div>
+					</div>
+					<!-- /sidebar menu -->
+
+					<!-- /menu footer buttons -->
+					<!--div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="{mezon-http-path}/vendor/gentella-template/res/login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div-->
+					<!-- /menu footer buttons -->
+				</div>
+			</div>
+
+			<!-- top navigation -->
+			<div class="top_nav">
+				<div class="nav_menu">
+					<nav>
+						<div class="nav toggle">
+							<a id="menu_toggle"><i class="fa fa-bars"></i></a>
+						</div>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li class=""><a href="javascript:;"
+								class="user-profile dropdown-toggle" data-toggle="dropdown"
+								aria-expanded="false"> <img
+									src="{mezon-http-path}/vendor/gentella-template/res/images/img.jpg"
+									alt="">{session-user-login}{extended-user-info} <span
+									class=" fa fa-angle-down"></span>
+							</a>
+								<ul class="dropdown-menu dropdown-usermenu pull-right">
+									<li><a href="{service-http-path}/logout/"><i
+											class="fa fa-sign-out pull-right"></i> Выход</a></li>
+								</ul></li>
+
+							<li role="presentation" class="dropdown">
+								<!--a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a-->
+								<ul id="menu1" class="dropdown-menu list-unstyled msg_list"
+									role="menu">
+									<li><a> <span class="image"><img
+												src="{mezon-http-path}/vendor/gentella-template/res/images/img.jpg"
+												alt="Profile Image" /></span> <span> <span>John
+													Smith</span> <span class="time">3 mins ago</span>
+										</span> <span class="message"> Film festivals used to be
+												do-or-die moments for movie makers. They were where... </span>
+									</a></li>
+									<li><a> <span class="image"><img
+												src="{mezon-http-path}/vendor/gentella-template/res/images/img.jpg"
+												alt="Profile Image" /></span> <span> <span>John
+													Smith</span> <span class="time">3 mins ago</span>
+										</span> <span class="message"> Film festivals used to be
+												do-or-die moments for movie makers. They were where... </span>
+									</a></li>
+									<li><a> <span class="image"><img
+												src="{mezon-http-path}/vendor/gentella-template/res/images/img.jpg"
+												alt="Profile Image" /></span> <span> <span>John
+													Smith</span> <span class="time">3 mins ago</span>
+										</span> <span class="message"> Film festivals used to be
+												do-or-die moments for movie makers. They were where... </span>
+									</a></li>
+									<li><a> <span class="image"><img
+												src="{mezon-http-path}/vendor/gentella-template/res/images/img.jpg"
+												alt="Profile Image" /></span> <span> <span>John
+													Smith</span> <span class="time">3 mins ago</span>
+										</span> <span class="message"> Film festivals used to be
+												do-or-die moments for movie makers. They were where... </span>
+									</a></li>
+									<li>
+										<div class="text-center">
+											<a> <strong>See All Alerts</strong> <i
+												class="fa fa-angle-right"></i>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- /top navigation -->
+
+			<!-- page content -->
+			<div class="right_col" role="main">{main}</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap -->
+	<script
+		src="{mezon-http-path}/vendor/gentella-template/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- FastClick -->
+	<script
+		src="{mezon-http-path}/vendor/gentella-template/fastclick/lib/fastclick.js"></script>
+	<!-- NProgress -->
+	<script
+		src="{mezon-http-path}/vendor/gentella-template/nprogress/nprogress.js"></script>
+	<!-- Chart.js -->
+	<!--script src="{mezon-http-path}/vendor/gentella-template/Chart.js/dist/Chart.min.js"></script-->
+	<!-- Skycons -->
+	<script
+		src="{mezon-http-path}/vendor/gentella-template/skycons/skycons.js"></script>
+	<!-- bootstrap-daterangepicker -->
+	<script
+		src="{mezon-http-path}/vendor/gentella-template/moment/min/moment.min.js"></script>
+	<script
+		src="{mezon-http-path}/vendor/gentella-template/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<!-- FastSelect -->
+	<script
+		src="{mezon-http-path}/vendor/gentella-template/fastselect/fastselect.js"></script>
+
+	<!-- Custom Theme Scripts -->
+	<script
+		src="{mezon-http-path}/vendor/gentella-template/build/js/custom.js"></script>
+	<!-- Application Scipts -->
+	<script src="{service-http-path}/include/js/app.js"></script>
+	{counter}
+</body>
+</html>

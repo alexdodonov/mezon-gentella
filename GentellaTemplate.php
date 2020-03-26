@@ -16,7 +16,7 @@ namespace Mezon\Gentella;
 /**
  * Template class
  */
-class GentellaTemplate extends \Mezon\Application\HtmlTemplate
+class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
 {
 
     /**

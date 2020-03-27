@@ -11,8 +11,6 @@ namespace Mezon\Gentella;
  * @copyright Copyright (c) 2019, aeon.org
  */
 
-// TODO add dependency https://github.com/ColorlibHQ/gentelella/releases/tag/1.4.0
-
 /**
  * Template class
  */

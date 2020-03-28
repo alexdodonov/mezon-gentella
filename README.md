@@ -7,3 +7,8 @@ Just type
 ```
 composer require mezon/gentella
 ```
+
+## Variables
+
+show-registration-link - 0/1 hide or show registration link on the login page
+show-restore-password-link - 0/1 hide or show restore password link on the login page

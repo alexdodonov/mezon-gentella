@@ -65,14 +65,14 @@
 						<div class="clearfix"></div>
 
 						<div class="separator">
-							<p class="change_link">
+							{switch:{show-registration-link}}{case:1}<p class="change_link">
 								<a href="../registration/" class="to_register">
 									Зарегистрироваться </a>
-							</p>
-							<p class="change_link">
+							</p>{~case}{~switch}
+							{switch:{show-restore-password-link}}{case:1}<p class="change_link">
 								<a href="../restore-password/" class="to_register">
 									Восстановить пароль </a>
-							</p>
+							</p>{~case}{~switch}
 
 							<div class="clearfix"></div>
 							<br />

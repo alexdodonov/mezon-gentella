@@ -58,4 +58,18 @@ class GentellaTemplateUnitTest extends \PHPUnit\Framework\TestCase
 
         $this->assertEquals($str1, $str2, 'Invalid HTML');
     }
+
+    /**
+     * Testing constructor
+     */
+    public function testConstruct(): void
+    {
+        // setup and test body
+        $template = new \Mezon\Gentella\GentellaTemplate();
+
+        // assertions
+        $this->assertEquals('', $template->getPageVar('action'));
+        $this->assertEquals(1, $template->getPageVar('show-registration-link'));
+        $this->assertEquals(1, $template->getPageVar('show-restore-password-link'));
+    }
 }

@@ -28,6 +28,8 @@ class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
         parent::__construct(dirname(__FILE__), $template);
 
         $this->setPageVar('action', '');
+        $this->setPageVar('show-registration-link', 1);
+        $this->setPageVar('show-restore-password-link', 1);
     }
 
     /**

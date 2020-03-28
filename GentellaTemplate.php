@@ -28,8 +28,12 @@ class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
         parent::__construct(dirname(__FILE__), $template);
 
         $this->setPageVar('action', '');
-        $this->setPageVar('show-registration-link', 1);
-        $this->setPageVar('show-restore-password-link', 1);
+        $this->setPageVar(
+            'show-registration-link',
+            \Mezon\Conf\Conf::getConfigValue('template/show-registration-link', 1));
+        $this->setPageVar(
+            'show-restore-password-link',
+            \Mezon\Conf\Conf::getConfigValue('template/show-restore-password-link', 1));
     }
 
     /**
@@ -47,7 +51,7 @@ class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
         $content .= '<div class="alert ' . $msgType . ' alert-dismissible fade in" role="alert">';
         $content .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
 
-        return $content.'<span aria-hidden="true">×</span></button>' . $message . '</div></div>';
+        return $content . '<span aria-hidden="true">×</span></button>' . $message . '</div></div>';
     }
 
     /**

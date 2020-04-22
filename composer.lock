@@ -86,16 +86,16 @@
         },
         {
             "name": "mezon/html-template",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alexdodonov/mezon-html-template.git",
-                "reference": "90cef7aa5f53f8715af044356116259665ad887b"
+                "reference": "09adf0038bdf0bff8b89baeef7c138365c56887a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alexdodonov/mezon-html-template/zipball/90cef7aa5f53f8715af044356116259665ad887b",
-                "reference": "90cef7aa5f53f8715af044356116259665ad887b",
+                "url": "https://api.github.com/repos/alexdodonov/mezon-html-template/zipball/09adf0038bdf0bff8b89baeef7c138365c56887a",
+                "reference": "09adf0038bdf0bff8b89baeef7c138365c56887a",
                 "shasum": ""
             },
             "require": {
@@ -123,7 +123,7 @@
             ],
             "description": "Small html-template script",
             "homepage": "https://github.com/alexdodonov/mezon-html-template",
-            "time": "2020-02-20T22:02:19+00:00"
+            "time": "2020-04-21T15:45:27+00:00"
         },
         {
             "name": "mezon/template-engine",

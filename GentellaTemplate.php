@@ -27,12 +27,15 @@ class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
     {
         parent::__construct(dirname(__FILE__), $template);
 
-        $this->setPageVars([
-            'action' => '',
-            'show-registration-link' => \Mezon\Conf\Conf::getConfigValue('template/show-registration-link', 1),
-            'show-restore-password-link' => \Mezon\Conf\Conf::getConfigValue('template/show-restore-password-link', 1),
-            'favicon-path' => \Mezon\Conf\Conf::getConfigValue('template/favicon-path', '/res/images/favicon.ico')
-        ]);
+        $this->setPageVars(
+            [
+                'action' => '',
+                'show-registration-link' => \Mezon\Conf\Conf::getConfigValue('template/show-registration-link', 1),
+                'show-restore-password-link' => \Mezon\Conf\Conf::getConfigValue(
+                    'template/show-restore-password-link',
+                    1),
+                'favicon-path' => \Mezon\Conf\Conf::getConfigValue('template/favicon-path', '/res/images/favicon.ico')
+            ]);
     }
 
     /**
@@ -46,11 +49,12 @@ class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
      */
     protected static function getMessageContent(string $msgType, string $message): string
     {
-        $content = '<div class="x_content" style="margin: 0; padding: 0;">';
-        $content .= '<div class="alert ' . $msgType . ' alert-dismissible fade in" role="alert">';
-        $content .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
-
-        return $content . '<span aria-hidden="true">×</span></button>' . $message . '</div></div>';
+        return \Mezon\TemplateEngine\TemplateEngine::printRecord(
+            file_get_contents(__DIR__ . '/res/templates/message.tpl'),
+            [
+                'type' => $msgType,
+                'message' => $message
+            ]);
     }
 
     /**

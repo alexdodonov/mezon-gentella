@@ -12,3 +12,4 @@ composer require mezon/gentella
 
 template/show-registration-link - 0/1 hide or show registration link on the login page
 template/show-restore-password-link - 0/1 hide or show restore password link on the login page
+template/favicon-path - path to the favicon. Defaulted to '/res/images/favicon.ico'

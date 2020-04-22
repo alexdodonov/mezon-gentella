@@ -27,13 +27,12 @@ class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
     {
         parent::__construct(dirname(__FILE__), $template);
 
-        $this->setPageVar('action', '');
-        $this->setPageVar(
-            'show-registration-link',
-            \Mezon\Conf\Conf::getConfigValue('template/show-registration-link', 1));
-        $this->setPageVar(
-            'show-restore-password-link',
-            \Mezon\Conf\Conf::getConfigValue('template/show-restore-password-link', 1));
+        $this->setPageVars([
+            'action' => '',
+            'show-registration-link' => \Mezon\Conf\Conf::getConfigValue('template/show-registration-link', 1),
+            'show-restore-password-link' => \Mezon\Conf\Conf::getConfigValue('template/show-restore-password-link', 1),
+            'favicon-path' => \Mezon\Conf\Conf::getConfigValue('template/favicon-path', '/res/images/favicon.ico')
+        ]);
     }
 
     /**

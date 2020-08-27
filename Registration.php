@@ -1,5 +1,4 @@
 <?php
-
 namespace Mezon\Gentella\Views;
 
 use Mezon\Application\ViewStatic;
@@ -18,7 +17,9 @@ use Mezon\HtmlTemplate\HtmlTemplate;
 /**
  * View class
  */
-class Registration extends ViewStatic {
+class Registration extends ViewStatic
+{
+
     /**
      * Constructor
      *

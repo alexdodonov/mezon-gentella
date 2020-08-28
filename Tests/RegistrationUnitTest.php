@@ -8,7 +8,7 @@ class RegistrationUnitTest extends \PHPUnit\Framework\TestCase
     /**
      * Testing constructor
      */
-    public function test() : void
+    public function testConstructor() : void
     {
         // setup
         $template = new GentellaTemplate();

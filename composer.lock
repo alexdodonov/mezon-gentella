@@ -78,16 +78,16 @@
         },
         {
             "name": "mezon/application",
-            "version": "1.1.15",
+            "version": "1.1.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alexdodonov/mezon-application.git",
-                "reference": "04f83a9ffb2778011388b3a694e223ecf917ee32"
+                "reference": "93d3aa158f01d4588a5e2ffbfe8a617b9c37d950"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alexdodonov/mezon-application/zipball/04f83a9ffb2778011388b3a694e223ecf917ee32",
-                "reference": "04f83a9ffb2778011388b3a694e223ecf917ee32",
+                "url": "https://api.github.com/repos/alexdodonov/mezon-application/zipball/93d3aa158f01d4588a5e2ffbfe8a617b9c37d950",
+                "reference": "93d3aa158f01d4588a5e2ffbfe8a617b9c37d950",
                 "shasum": ""
             },
             "require": {
@@ -101,7 +101,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Mezon\\Application\\": ""
+                    "Mezon\\Application\\": "",
+                    "Mezon\\Application\\Tests\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -118,7 +119,7 @@
             ],
             "description": "Small application script",
             "homepage": "https://github.com/alexdodonov/mezon-application",
-            "time": "2020-07-06T11:22:02+00:00"
+            "time": "2020-09-01T06:18:39+00:00"
         },
         {
             "name": "mezon/conf",
@@ -361,16 +362,16 @@
         },
         {
             "name": "mezon/router",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alexdodonov/mezon-router.git",
-                "reference": "c5cf9161d39385cde7c97f14bc1f6fcb35e80be8"
+                "reference": "f3dde31870a605f600dd01fe8014ef884975f40a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alexdodonov/mezon-router/zipball/c5cf9161d39385cde7c97f14bc1f6fcb35e80be8",
-                "reference": "c5cf9161d39385cde7c97f14bc1f6fcb35e80be8",
+                "url": "https://api.github.com/repos/alexdodonov/mezon-router/zipball/f3dde31870a605f600dd01fe8014ef884975f40a",
+                "reference": "f3dde31870a605f600dd01fe8014ef884975f40a",
                 "shasum": ""
             },
             "require": {
@@ -399,7 +400,7 @@
             ],
             "description": "Small and fast routing framework",
             "homepage": "https://github.com/alexdodonov/mezon-router",
-            "time": "2020-08-26T13:42:16+00:00"
+            "time": "2020-08-28T15:28:08+00:00"
         },
         {
             "name": "mezon/template-engine",

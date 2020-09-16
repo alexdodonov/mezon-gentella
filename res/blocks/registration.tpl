@@ -18,7 +18,7 @@
 						</div>
 						<div>
 							<input type="password" class="form-control"
-								placeholder="Подтверждение пароля" name="password-confirm" />
+								placeholder="Подтверждение пароля" name="password-confirmation" />
 						</div>
 						<div>
 							<a class="btn btn-default submit" href="javascript:void(0);"

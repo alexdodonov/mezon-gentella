@@ -1,8 +1,8 @@
 <?php
 namespace Mezon\Gentella\Views;
 
-use Mezon\Application\ViewStatic;
 use Mezon\HtmlTemplate\HtmlTemplate;
+use Mezon\Application\ViewStatic;
 
 /**
  * Class Registration

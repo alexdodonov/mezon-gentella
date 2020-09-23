@@ -54,6 +54,11 @@ class Registration extends ViewStatic
                     'message',
                     GentellaTemplate::dangerMessageContent('Пользователь существует'));
                 break;
+            case ('user-was-created-authorize'):
+                $this->getTemplate()->setPageVar(
+                'message',
+                GentellaTemplate::successMessageContent('Регистрация прошла успешно. Теперь Вы можете авторизоваться'));
+                break;
             default:
                 break;
         }

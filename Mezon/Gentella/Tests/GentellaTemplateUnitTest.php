@@ -1,4 +1,5 @@
 <?php
+namespace Mezon\Gentella\Tests;
 
 class GentellaTemplateUnitTest extends \PHPUnit\Framework\TestCase
 {

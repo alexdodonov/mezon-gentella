@@ -1,6 +1,10 @@
 <?php
 namespace Mezon\Gentella;
 
+use Mezon\HtmlTemplate\HtmlTemplate;
+use Mezon\Conf\Conf;
+use Mezon\TemplateEngine\TemplateEngine;
+
 /**
  * Class GentellaTemplate
  *
@@ -14,7 +18,7 @@ namespace Mezon\Gentella;
 /**
  * Template class
  */
-class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
+class GentellaTemplate extends HtmlTemplate
 {
 
     /**
@@ -30,11 +34,12 @@ class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
         $this->setPageVars(
             [
                 'action' => '',
-                'show-registration-link' => \Mezon\Conf\Conf::getConfigValue('template/show-registration-link', 1),
-                'show-restore-password-link' => \Mezon\Conf\Conf::getConfigValue(
-                    'template/show-restore-password-link',
-                    1),
-                'favicon-path' => \Mezon\Conf\Conf::getConfigValue('template/favicon-path', '/res/images/favicon.ico')
+                'show-registration-link' => Conf::getConfigValue('template/show-registration-link', 1),
+                'show-restore-password-link' => Conf::getConfigValue('template/show-restore-password-link', 1),
+                'favicon-path' => Conf::getConfigValue('template/favicon-path', '/res/images/favicon.ico'),
+                'mezon-gentelella-http-path' => Conf::getConfigValue(
+                    'template/mezon-gentelella-http-path',
+                    '/vendor/mezon/gentella/Mezon/Gentella'),
             ]);
     }
 
@@ -49,7 +54,7 @@ class GentellaTemplate extends \Mezon\HtmlTemplate\HtmlTemplate
      */
     protected static function getMessageContent(string $msgType, string $message): string
     {
-        return \Mezon\TemplateEngine\TemplateEngine::printRecord(
+        return TemplateEngine::printRecord(
             file_get_contents(__DIR__ . '/res/templates/message.tpl'),
             [
                 'type' => $msgType,

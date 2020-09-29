@@ -1,4 +1,6 @@
 <?php
+namespace Mezon\Gentella\Tests;
+
 use Mezon\Gentella\Views\Registration;
 use Mezon\Gentella\GentellaTemplate;
 

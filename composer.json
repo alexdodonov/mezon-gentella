@@ -28,8 +28,7 @@
 	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
-			"Mezon\\Gentella\\": "",
-			"Mezon\\Gentella\\Views\\" : ""
+			"Mezon\\Gentella\\": "./Mezon/Gentella"
 		}
 	},
 	"scripts": {

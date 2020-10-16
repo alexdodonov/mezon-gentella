@@ -3,8 +3,9 @@ namespace Mezon\Gentella\Tests;
 
 use Mezon\Gentella\Views\Registration;
 use Mezon\Gentella\GentellaTemplate;
+use Mezon\Gentella\Views\PasswordRestoration;
 
-class RegistrationUnitTest extends ViewTestBase
+class PasswordRestorationUnitTest extends ViewTestBase
 {
 
     /**
@@ -17,44 +18,44 @@ class RegistrationUnitTest extends ViewTestBase
      * @param string $messageType
      *            message type
      */
-    protected function assertRegistrationOutput(string $result, string $message = '', string $messageType = 'danger'): void
+    protected function assertPasswordRestorationOutput(
+        string $result,
+        string $message = '',
+        string $messageType = 'danger'): void
     {
-        $this->assertOutput($result, 'Регистрация', $message, $messageType);
+        $this->assertOutput($result, 'Восстановление<br>пароля', $message, $messageType);
     }
 
     /**
-     * Data provider for the testConstructor
+     * Data provider for testConstructor
      *
      * @return array testing data
      */
-    public function registrationDataProvider(): array
+    public function passwordRestorationDataProvider(): array
     {
         return [
             [
                 '',
                 function (string $result) {
-                    $this->assertRegistrationOutput($result);
+                    $this->assertPasswordRestorationOutput($result);
                 }
             ],
             [
-                'passwords-not-match',
+                'user-does-not-exist',
                 function (string $result) {
-                    $this->assertRegistrationOutput($result, 'Пароли должны совпадать');
+                    $this->assertPasswordRestorationOutput($result, 'Пользователь не существует');
                 }
             ],
             [
-                'user-exists',
+                'email-not-set',
                 function (string $result) {
-                    $this->assertRegistrationOutput($result, 'Пользователь существует');
+                    $this->assertPasswordRestorationOutput($result, 'Заполните поле "Email"!');
                 }
             ],
             [
-                'user-was-created-authorize',
+                'check-your-email',
                 function (string $result) {
-                    $this->assertRegistrationOutput(
-                        $result,
-                        'Регистрация прошла успешно. Теперь Вы можете авторизоваться',
-                        'success');
+                    $this->assertPasswordRestorationOutput($result, 'Проверьте свою почту!', 'success');
                 }
             ]
         ];
@@ -63,13 +64,13 @@ class RegistrationUnitTest extends ViewTestBase
     /**
      * Testing constructor
      *
-     * @dataProvider registrationDataProvider
+     * @dataProvider passwordRestorationDataProvider
      */
     public function testConstructor(string $message, callable $assert): void
     {
         // setup
         $template = new GentellaTemplate();
-        $view = new Registration($template);
+        $view = new PasswordRestoration($template);
         $view->setErrorMessage($message);
 
         // test body

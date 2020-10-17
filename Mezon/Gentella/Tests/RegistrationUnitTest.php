@@ -49,6 +49,12 @@ class RegistrationUnitTest extends ViewTestBase
                 }
             ],
             [
+                'all-fields-must-be-filled',
+                function (string $result) {
+                    $this->assertRegistrationOutput($result, 'Все поля должны быть заполнены');
+                }
+            ],
+            [
                 'user-was-created-authorize',
                 function (string $result) {
                     $this->assertRegistrationOutput(

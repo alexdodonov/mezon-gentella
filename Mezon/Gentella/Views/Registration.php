@@ -54,10 +54,16 @@ class Registration extends ViewStatic
                     'message',
                     GentellaTemplate::dangerMessageContent('Пользователь существует'));
                 break;
+            case ('all-fields-must-be-filled'):
+                $this->getTemplate()->setPageVar(
+                    'message',
+                    GentellaTemplate::dangerMessageContent('Все поля должны быть заполнены'));
+                break;
             case ('user-was-created-authorize'):
                 $this->getTemplate()->setPageVar(
-                'message',
-                GentellaTemplate::successMessageContent('Регистрация прошла успешно. Теперь Вы можете авторизоваться'));
+                    'message',
+                    GentellaTemplate::successMessageContent(
+                        'Регистрация прошла успешно. Теперь Вы можете авторизоваться'));
                 break;
             default:
                 break;

@@ -40,11 +40,15 @@ class PasswordRestorationCompleteUnitTest extends ViewTestBase
                 }
             ],
             [
-                'token-outdated',
+                'token-not-found',
                 function (string $result) {
-                    $this->assertPasswordRestorationCompleteOutput(
-                        $result,
-                        'Токен просрочен. Запросите восстановление пароля ещё раз и дождитесь письма с инструкциями по восстановлению пароля.');
+                    $this->assertPasswordRestorationCompleteOutput($result, 'Токен не найден');
+                }
+            ],
+            [
+                'token-not-set',
+                function (string $result) {
+                    $this->assertPasswordRestorationCompleteOutput($result, 'Токен не указан');
                 }
             ],
             [

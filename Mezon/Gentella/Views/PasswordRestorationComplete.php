@@ -44,11 +44,11 @@ class PasswordRestorationComplete extends ViewStatic
         parent::setErrorMessage($errorMessage);
 
         switch ($errorMessage) {
-            case ('token-outdated'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::dangerMessageContent(
-                        'Токен просрочен. Запросите восстановление пароля ещё раз и дождитесь письма с инструкциями по восстановлению пароля.'));
+            case ('token-not-set'):
+                $this->getTemplate()->setPageVar('message', GentellaTemplate::dangerMessageContent('Токен не указан'));
+                break;
+            case ('token-not-found'):
+                $this->getTemplate()->setPageVar('message', GentellaTemplate::dangerMessageContent('Токен не найден'));
                 break;
             case ('check-your-email'):
                 $this->getTemplate()->setPageVar(

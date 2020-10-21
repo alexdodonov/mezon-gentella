@@ -37,7 +37,7 @@ class LoginUnitTest extends ViewTestBase
                 }
             ],
             [
-                'user-does-not-exists',
+                'user-does-not-exist',
                 function (string $result) {
                     $this->assertLoginOutput($result, 'Пользователь не существует');
                 }

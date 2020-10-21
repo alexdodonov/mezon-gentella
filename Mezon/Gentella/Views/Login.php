@@ -44,7 +44,7 @@ class Login extends ViewStatic
         parent::setErrorMessage($errorMessage);
 
         switch ($errorMessage) {
-            case ('user-does-not-exists'):
+            case ('user-does-not-exist'):
                 $this->getTemplate()->setPageVar(
                     'message',
                     GentellaTemplate::dangerMessageContent('Пользователь не существует'));

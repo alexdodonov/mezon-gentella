@@ -15,8 +15,8 @@
 	},
 	"require": {
 		"php": ">=7.2.0",
-		"mezon/html-template": "^1.0",
-		"mezon/application": "^1.1"
+		"mezon/html-template": "1.1.*",
+		"mezon/application": "2.0.*"
 	},
 	"support": {
 		"email": "alexey@dodonov.pro",
@@ -32,6 +32,7 @@
 		}
 	},
 	"scripts": {
-		"test": "php ./vendor/phpunit/phpunit/phpunit --testsuit all"
+		"test": "php ./vendor/phpunit/phpunit/phpunit --testsuit all",
+		"post-update-cmd": "php ./vendor/phpunit/phpunit/phpunit --testsuit all"
 	}
 }

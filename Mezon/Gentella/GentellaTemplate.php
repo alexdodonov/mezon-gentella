@@ -55,7 +55,7 @@ class GentellaTemplate extends HtmlTemplate
     protected static function getMessageContent(string $msgType, string $message): string
     {
         return TemplateEngine::printRecord(
-            file_get_contents(__DIR__ . '/res/templates/message.tpl'),
+            file_get_contents(__DIR__ . '/Res/Templates/message.tpl'),
             [
                 'type' => $msgType,
                 'message' => $message

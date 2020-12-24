@@ -1,7 +1,7 @@
 <?php
 namespace Mezon\Gentella\Tests\Selenium;
 
-use Enterprize\Selenium\PersistentTools;
+use Mezon\Selenium\PersistentTools;
 use Facebook\WebDriver\WebDriverBy;
 
 class LoginTest extends PersistentTools

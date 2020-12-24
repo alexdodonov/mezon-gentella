@@ -10,7 +10,7 @@ trait LoginLogoutTrait
      * 
      * @var string
      */
-    public static $LoginUrl = '';
+    public static $loginUrl = '';
 
     /**
      * Method authorizes user

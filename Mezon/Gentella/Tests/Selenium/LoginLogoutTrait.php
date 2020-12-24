@@ -1,7 +1,6 @@
 <?php
 namespace Mezon\Gentella\Tests\Selenium;
 
-// TODO make selenium-tests-utilities public package
 trait LoginLogoutTrait
 {
     

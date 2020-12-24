@@ -1,7 +1,10 @@
 <?php
-namespace Mezon\Gentella\Tests;
+namespace Mezon\Gentella\Tests\Unit;
 
-class GentellaTemplateUnitTest extends \PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase;
+use Mezon\Gentella\GentellaTemplate;
+
+class GentellaTemplateUnitTest extends TestCase
 {
 
     /**
@@ -9,7 +12,7 @@ class GentellaTemplateUnitTest extends \PHPUnit\Framework\TestCase
      */
     public function testSuccessMessageContent()
     {
-        $str1 = \Mezon\Gentella\GentellaTemplate::successMessageContent('msg');
+        $str1 = GentellaTemplate::successMessageContent('msg');
         $str2 = '<div class="x_content" style="margin: 0; padding: 0;">' .
             '<div class="alert alert-success alert-dismissible fade in show" role="alert">' .
             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' .
@@ -23,7 +26,7 @@ class GentellaTemplateUnitTest extends \PHPUnit\Framework\TestCase
      */
     public function testWarningMessageContent()
     {
-        $str1 = \Mezon\Gentella\GentellaTemplate::warningMessageContent('msg');
+        $str1 = GentellaTemplate::warningMessageContent('msg');
         $str2 = '<div class="x_content" style="margin: 0; padding: 0;">' .
             '<div class="alert alert-warning alert-dismissible fade in show" role="alert">' .
             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' .
@@ -37,7 +40,7 @@ class GentellaTemplateUnitTest extends \PHPUnit\Framework\TestCase
      */
     public function testInfoMessageContent()
     {
-        $str1 = \Mezon\Gentella\GentellaTemplate::infoMessageContent('msg');
+        $str1 = GentellaTemplate::infoMessageContent('msg');
         $str2 = '<div class="x_content" style="margin: 0; padding: 0;">' .
             '<div class="alert alert-info alert-dismissible fade in show" role="alert">' .
             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' .
@@ -51,7 +54,7 @@ class GentellaTemplateUnitTest extends \PHPUnit\Framework\TestCase
      */
     public function testDangerMessageContent()
     {
-        $str1 = \Mezon\Gentella\GentellaTemplate::dangerMessageContent('msg');
+        $str1 = GentellaTemplate::dangerMessageContent('msg');
         $str2 = '<div class="x_content" style="margin: 0; padding: 0;">' .
             '<div class="alert alert-danger alert-dismissible fade in show" role="alert">' .
             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' .
@@ -66,7 +69,7 @@ class GentellaTemplateUnitTest extends \PHPUnit\Framework\TestCase
     public function testConstruct(): void
     {
         // setup and test body
-        $template = new \Mezon\Gentella\GentellaTemplate();
+        $template = new GentellaTemplate();
 
         // assertions
         $this->assertEquals('', $template->getPageVar('action'));

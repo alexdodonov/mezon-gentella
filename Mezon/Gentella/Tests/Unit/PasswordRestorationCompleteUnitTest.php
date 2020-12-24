@@ -1,5 +1,5 @@
 <?php
-namespace Mezon\Gentella\Tests;
+namespace Mezon\Gentella\Tests\Unit;
 
 use Mezon\Gentella\GentellaTemplate;
 use Mezon\Gentella\Views\PasswordRestorationComplete;

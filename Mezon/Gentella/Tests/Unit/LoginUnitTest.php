@@ -1,11 +1,10 @@
 <?php
-namespace Mezon\Gentella\Tests;
+namespace Mezon\Gentella\Tests\Unit;
 
-use Mezon\Gentella\Views\Registration;
+use Mezon\Gentella\Views\Login;
 use Mezon\Gentella\GentellaTemplate;
-use Mezon\Gentella\Views\PasswordRestoration;
 
-class PasswordRestorationUnitTest extends ViewTestBase
+class LoginUnitTest extends ViewTestBase
 {
 
     /**
@@ -18,44 +17,41 @@ class PasswordRestorationUnitTest extends ViewTestBase
      * @param string $messageType
      *            message type
      */
-    protected function assertPasswordRestorationOutput(
-        string $result,
-        string $message = '',
-        string $messageType = 'danger'): void
+    protected function assertLoginOutput(string $result, string $message = '', string $messageType = 'danger'): void
     {
-        $this->assertOutput($result, 'Восстановление<br>пароля', $message, $messageType);
+        $this->assertOutput($result, 'Вход в систему', $message, $messageType);
     }
 
     /**
-     * Data provider for testConstructor
+     * Data provider for the testConstructor
      *
      * @return array testing data
      */
-    public function passwordRestorationDataProvider(): array
+    public function loginDataProvider(): array
     {
         return [
             [
                 '',
                 function (string $result) {
-                    $this->assertPasswordRestorationOutput($result);
+                    $this->assertLoginOutput($result);
                 }
             ],
             [
                 'user-does-not-exist',
                 function (string $result) {
-                    $this->assertPasswordRestorationOutput($result, 'Пользователь не существует');
+                    $this->assertLoginOutput($result, 'Пользователь не существует');
                 }
             ],
             [
-                'email-not-set',
+                'invalid-password',
                 function (string $result) {
-                    $this->assertPasswordRestorationOutput($result, 'Заполните поле "Email"!');
+                    $this->assertLoginOutput($result, 'Неправильный пароль');
                 }
             ],
             [
-                'check-your-email',
+                'all-fields-must-be-filled',
                 function (string $result) {
-                    $this->assertPasswordRestorationOutput($result, 'Проверьте свою почту!', 'success');
+                    $this->assertLoginOutput($result, 'Все поля должны быть заполнены');
                 }
             ]
         ];
@@ -64,13 +60,13 @@ class PasswordRestorationUnitTest extends ViewTestBase
     /**
      * Testing constructor
      *
-     * @dataProvider passwordRestorationDataProvider
+     * @dataProvider loginDataProvider
      */
     public function testConstructor(string $message, callable $assert): void
     {
         // setup
         $template = new GentellaTemplate();
-        $view = new PasswordRestoration($template);
+        $view = new Login($template);
         $view->setErrorMessage($message);
 
         // test body

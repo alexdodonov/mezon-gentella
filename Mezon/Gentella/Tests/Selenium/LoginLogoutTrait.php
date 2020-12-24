@@ -4,6 +4,13 @@ namespace Mezon\Gentella\Tests\Selenium;
 // TODO make selenium-tests-utilities public package
 trait LoginLogoutTrait
 {
+    
+    /**
+     * Login URL
+     * 
+     * @var string
+     */
+    public static $LoginUrl = '';
 
     /**
      * Method authorizes user
@@ -15,7 +22,7 @@ trait LoginLogoutTrait
      */
     private function requireLoggedIn(string $login, string $password): void
     {
-        $this->waitForPageLoad('http://corp-learning.local/cab/');
+        $this->waitForPageLoad(self::$LoginUrl);
 
         if ($this->elementExists('img.profile_img')) {
             // we are already authorized

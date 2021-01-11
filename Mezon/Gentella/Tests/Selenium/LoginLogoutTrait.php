@@ -21,7 +21,7 @@ trait LoginLogoutTrait
      */
     private function requireLoggedIn(string $login, string $password): void
     {
-        $this->waitForPageLoad(self::$LoginUrl);
+        $this->waitForPageLoad(self::$loginUrl);
 
         if ($this->elementExists('img.profile_img')) {
             // we are already authorized

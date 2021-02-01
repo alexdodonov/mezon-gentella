@@ -19,7 +19,7 @@ trait LoginLogoutTrait
      * @param string $password
      *            user password
      */
-    private function requireLoggedIn(string $login, string $password): void
+    protected function requireLoggedIn(string $login, string $password): void
     {
         $this->waitForPageLoad(self::$loginUrl);
 
@@ -40,7 +40,7 @@ trait LoginLogoutTrait
     /**
      * Method forces user to logout
      */
-    private function requireLoggedOut(): void
+    protected function requireLoggedOut(): void
     {
         if ($this->elementExists('input[name=login]')) {
             // we are already logged out

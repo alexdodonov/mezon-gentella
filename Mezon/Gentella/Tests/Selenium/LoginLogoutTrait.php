@@ -1,15 +1,10 @@
 <?php
 namespace Mezon\Gentella\Tests\Selenium;
 
+use Mezon\Conf\Conf;
+
 trait LoginLogoutTrait
 {
-    
-    /**
-     * Login URL
-     * 
-     * @var string
-     */
-    public static $loginUrl = '';
 
     /**
      * Method authorizes user
@@ -21,7 +16,7 @@ trait LoginLogoutTrait
      */
     protected function requireLoggedIn(string $login, string $password): void
     {
-        $this->waitForPageLoad(self::$loginUrl);
+        $this->waitForPageLoad(Conf::getConfigValue('login-url'));
 
         if ($this->elementExists('img.profile_img')) {
             // we are already authorized

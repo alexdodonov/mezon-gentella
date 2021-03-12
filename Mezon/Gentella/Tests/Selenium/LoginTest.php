@@ -6,6 +6,8 @@ use Facebook\WebDriver\WebDriverBy;
 
 class LoginTest extends PersistentTools
 {
+    
+    use LoginLogoutTrait;
 
     /**
      * Testing login

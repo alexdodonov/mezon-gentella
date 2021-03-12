@@ -5,7 +5,7 @@ use Mezon\Selenium\PersistentTools;
 use Mezon\PdoCrud\ConnectionTrait;
 use Mezon\Conf\Conf;
 
-class RegisterUserTest extends PersistentTools
+class RegistrationUserTest extends PersistentTools
 {
 
     use ConnectionTrait, LoginLogoutTrait;

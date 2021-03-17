@@ -7,6 +7,13 @@ trait LoginLogoutTrait
 {
 
     /**
+     * Login of the last logged in user
+     *
+     * @var string
+     */
+    private static $lastLogin = '';
+
+    /**
      * Method authorizes user
      *
      * @param string $login
@@ -16,20 +23,28 @@ trait LoginLogoutTrait
      */
     protected function requireLoggedIn(string $login, string $password): void
     {
-        $this->waitForPageLoad(Conf::getConfigValue('login-url'));
-
-        if ($this->elementExists('img.profile_img')) {
-            // we are already authorized
-            return;
+        if (self::$lastLogin !== $login && self::$lastLogin !== '') {
+            $this->requireLoggedOut();
         }
 
-        $this->waitForVisibilityBySelector('input[name=login]');
+        if (self::$lastLogin === '' || self::$lastLogin !== $login) {
+            $this->waitForPageLoad(Conf::getConfigValue('login-url'));
 
-        $this->inputIn('input[name=login]', $login);
-        $this->inputIn('input[name=password]', $password);
-        $this->clickElement('a.btn-default');
+            if ($this->elementExists('img.profile_img')) {
+                // we are already authorized
+                return;
+            }
 
-        $this->waitForVisibilityBySelector('img.profile_img');
+            $this->waitForVisibilityBySelector('input[name=login]');
+
+            $this->inputIn('input[name=login]', $login);
+            $this->inputIn('input[name=password]', $password);
+            $this->clickElement('a.btn-default');
+
+            $this->waitForVisibilityBySelector('img.profile_img');
+
+            self::$lastLogin = $login;
+        }
     }
 
     /**

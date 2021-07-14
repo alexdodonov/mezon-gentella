@@ -64,5 +64,7 @@ trait LoginLogoutTrait
         $this->clickElement('.dropdown-item');
 
         $this->waitForVisibilityBySelector('input[name=login]');
+
+        self::$lastLogin = '';
     }
 }

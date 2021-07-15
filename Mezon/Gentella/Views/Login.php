@@ -5,6 +5,8 @@ use Mezon\HtmlTemplate\HtmlTemplate;
 use Mezon\Application\ViewStatic;
 use Mezon\Gentella\GentellaTemplate;
 
+// TODO use 403 template for CabApplication::403 page
+
 /**
  * Class Login
  *

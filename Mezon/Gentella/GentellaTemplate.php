@@ -31,16 +31,14 @@ class GentellaTemplate extends HtmlTemplate
     {
         parent::__construct(dirname(__FILE__), $template);
 
-        $this->setPageVars(
-            [
-                'action' => '',
-                'show-registration-link' => Conf::getConfigValue('template/show-registration-link', 1),
-                'show-restore-password-link' => Conf::getConfigValue('template/show-restore-password-link', 1),
-                'favicon-path' => Conf::getConfigValue('template/favicon-path', '/res/images/favicon.ico'),
-                'mezon-gentelella-http-path' => Conf::getConfigValue(
-                    'template/mezon-gentelella-http-path',
-                    '/vendor/mezon/gentella/Mezon/Gentella'),
-            ]);
+        $this->setPageVars([
+            'action' => '',
+            'icon' => Conf::getConfigValue('template/mezon-gentelella-icon', 'fa-paw'),
+            'show-registration-link' => Conf::getConfigValue('template/show-registration-link', 1),
+            'show-restore-password-link' => Conf::getConfigValue('template/show-restore-password-link', 1),
+            'favicon-path' => Conf::getConfigValue('template/favicon-path', '/res/images/favicon.ico'),
+            'mezon-gentelella-http-path' => Conf::getConfigValue('template/mezon-gentelella-http-path', '/vendor/mezon/gentella/Mezon/Gentella')
+        ]);
     }
 
     /**
@@ -54,12 +52,10 @@ class GentellaTemplate extends HtmlTemplate
      */
     protected static function getMessageContent(string $msgType, string $message): string
     {
-        return TemplateEngine::printRecord(
-            file_get_contents(__DIR__ . '/Res/Templates/message.tpl'),
-            [
-                'type' => $msgType,
-                'message' => $message
-            ]);
+        return TemplateEngine::printRecord(file_get_contents(__DIR__ . '/Res/Templates/message.tpl'), [
+            'type' => $msgType,
+            'message' => $message
+        ]);
     }
 
     /**

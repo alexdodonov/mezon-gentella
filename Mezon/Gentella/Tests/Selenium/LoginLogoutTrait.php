@@ -57,13 +57,15 @@ trait LoginLogoutTrait
             return;
         }
 
-        $this->clickElement('.user-profile');
+        if ($this->elementExists('.user-profile')) {
+            $this->clickElement('.user-profile');
 
-        $this->waitForVisibilityBySelector('.dropdown-item');
+            $this->waitForVisibilityBySelector('.dropdown-item');
 
-        $this->clickElement('.dropdown-item');
+            $this->clickElement('.dropdown-item');
 
-        $this->waitForVisibilityBySelector('input[name=login]');
+            $this->waitForVisibilityBySelector('input[name=login]');
+        }
 
         self::$lastLogin = '';
     }

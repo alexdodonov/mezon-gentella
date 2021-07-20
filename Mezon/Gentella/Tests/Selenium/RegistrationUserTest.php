@@ -4,6 +4,7 @@ namespace Mezon\Gentella\Tests\Selenium;
 use Mezon\Selenium\PersistentTools;
 use Mezon\PdoCrud\ConnectionTrait;
 use Mezon\Conf\Conf;
+use Enterprize\Auth\AuthModel;
 
 class RegistrationUserTest extends PersistentTools
 {
@@ -19,9 +20,10 @@ class RegistrationUserTest extends PersistentTools
     {
         parent::setUp();
 
-        $this->getConnection()->prepare('DELETE FROM user WHERE login LIKE :login');
-        $this->getConnection()->bindParameter(':login', 'testing@localhost');
-        $this->getConnection()->execute();
+        $authModel = new AuthModel();
+        if ($authModel->userWithLoginExists('testing@localhost')) {
+            $authModel->deleteUserByLogin('testing@localhost');
+        }
     }
 
     /**

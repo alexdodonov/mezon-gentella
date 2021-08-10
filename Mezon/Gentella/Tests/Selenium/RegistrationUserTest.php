@@ -21,8 +21,8 @@ class RegistrationUserTest extends PersistentTools
         parent::setUp();
 
         $authModel = new AuthModel();
-        if ($authModel->userWithLoginExists('testing@localhost')) {
-            $authModel->deleteUserByLogin('testing@localhost');
+        if ($authModel->userWithLoginExists('testing@localhost.ru')) {
+            $authModel->deleteUserByLogin('testing@localhost.ru');
         }
     }
 
@@ -35,13 +35,13 @@ class RegistrationUserTest extends PersistentTools
         $this->waitForPageLoad(Conf::getConfigValue('registration-url'));
 
         // test body
-        $this->inputIn('input[name=login]', 'testing@localhost');
+        $this->inputIn('input[name=login]', 'testing@localhost.ru');
         $this->inputIn('input[name=password]', 'abc112233');
         $this->inputIn('input[name=password-confirmation]', 'abc112233');
         $this->clickElement('a.btn-default');
 
         // assertions
         $this->waitForVisibilityBySelector('div.alert-success');
-        $this->requireLoggedIn('testing@localhost', 'abc112233');
+        $this->requireLoggedIn('testing@localhost.ru', 'abc112233');
     }
 }

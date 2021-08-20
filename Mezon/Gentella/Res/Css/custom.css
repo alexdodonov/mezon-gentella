@@ -1,4 +1,26 @@
-.login_content form div a.to_register {margin-right: 0px;}
-.alert-dismissible .close {padding: .59rem 1.25rem;}
-.page-title .title {float: left; display: block;}
-.x_title h2 {margin: 5px 0 6px; float: left; display: block; text-overflow: unset; overflow: hidden; white-space: unset; width: 100%;}
+.login_content form div a.to_register {
+	margin-right: 0px;
+}
+
+.alert-dismissible .close {
+	padding: .59rem 1.25rem;
+}
+
+.page-title .title {
+	float: left;
+	display: block;
+}
+
+.x_title h2 {
+	margin: 5px 0 6px;
+	float: left;
+	display: block;
+	text-overflow: unset;
+	overflow: hidden;
+	white-space: unset;
+	width: 100%;
+}
+
+.table-responsive {
+	min-height: 255px;
+}

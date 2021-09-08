@@ -9,7 +9,7 @@
 						<h1>Регистрация</h1>
 						{message}
 						<div>
-							<input type="text" class="form-control" placeholder="Email"
+							<input type="text" class="form-control" placeholder="Логин"
 								value="{login}" name="login" />
 						</div>
 						<div>

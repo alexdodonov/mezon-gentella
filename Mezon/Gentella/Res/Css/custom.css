@@ -24,3 +24,7 @@
 .table-responsive {
 	min-height: 255px;
 }
+
+span.fa.fa-calendar-o {
+	display: inline-block;
+}

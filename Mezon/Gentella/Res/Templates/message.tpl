@@ -1,1 +1,7 @@
-<div class="x_content" style="margin: 0; padding: 0;"><div class="alert {type} alert-dismissible fade in show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>{message}</div></div>
+<div class="alert {type} alert-dismissible fade in show" role="alert">
+	<button type="button" class="close" data-dismiss="alert"
+		aria-label="Close">
+		<span aria-hidden="true">×</span>
+	</button>
+	{message}
+</div>

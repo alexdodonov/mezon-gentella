@@ -62,6 +62,14 @@ class RegistrationUnitTest extends ViewTestBase
                         'Регистрация прошла успешно. Теперь Вы можете авторизоваться',
                         'success');
                 }
+            ],
+            [
+                'invalid-login-was-submitted-wile-registration',
+                function (string $result) {
+                    $this->assertRegistrationOutput(
+                        $result,
+                        'В качество логина можно использовать только email или телефон');
+                }
             ]
         ];
     }

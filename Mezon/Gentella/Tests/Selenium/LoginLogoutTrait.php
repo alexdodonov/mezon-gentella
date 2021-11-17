@@ -3,6 +3,10 @@ namespace Mezon\Gentella\Tests\Selenium;
 
 use Mezon\Conf\Conf;
 
+/**
+ *
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 trait LoginLogoutTrait
 {
 
@@ -28,7 +32,7 @@ trait LoginLogoutTrait
         }
 
         if (self::$lastLogin === '' || self::$lastLogin !== $login) {
-            $this->waitForPageLoad(Conf::getConfigValue('login-url'));
+            $this->waitForPageLoad(Conf::getConfigValueAsString('login-url'));
 
             if ($this->elementExists('img.profile_img')) {
                 // we are already authorized

@@ -4,6 +4,7 @@ namespace Mezon\Gentella\Views;
 use Mezon\HtmlTemplate\HtmlTemplate;
 use Mezon\Application\ViewStatic;
 use Mezon\Gentella\GentellaTemplate;
+use Mezon\Application\ViewBase;
 
 // TODO use 403 template for CabApplication::403 page
 
@@ -39,9 +40,9 @@ class Login extends ViewStatic
     /**
      *
      * {@inheritdoc}
-     * @see \Mezon\Application\ViewBase::setErrorMessage()
+     * @see ViewBase::setErrorMessage()
      */
-    public function setErrorMessage($errorMessage): void
+    public function setErrorMessage(string $errorMessage): void
     {
         parent::setErrorMessage($errorMessage);
 

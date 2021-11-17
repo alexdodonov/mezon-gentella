@@ -6,25 +6,14 @@ use Mezon\PdoCrud\ConnectionTrait;
 use Mezon\Conf\Conf;
 use Enterprize\Auth\AuthModel;
 
+/**
+ *
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 class RegistrationUserTest extends PersistentTools
 {
 
     use ConnectionTrait, LoginLogoutTrait;
-
-    /**
-     *
-     * {@inheritdoc}
-     * @see \Mezon\Selenium\PersistentTools::setUp()
-     */
-    public function setUp(): void
-    {
-        parent::setUp();
-
-        $authModel = new AuthModel();
-        if ($authModel->userWithLoginExists('testing@localhost.ru')) {
-            $authModel->deleteUserByLogin('testing@localhost.ru');
-        }
-    }
 
     /**
      * Testing user registration
@@ -32,7 +21,7 @@ class RegistrationUserTest extends PersistentTools
     public function testRegisterUser(): void
     {
         // setup
-        $this->waitForPageLoad(Conf::getConfigValue('registration-url'));
+        $this->waitForPageLoad(Conf::getConfigValueAsString('registration-url'));
 
         // test body
         $this->inputIn('input[name=login]', 'testing@localhost.ru');

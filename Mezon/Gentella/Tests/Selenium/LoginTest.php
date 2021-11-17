@@ -2,8 +2,11 @@
 namespace Mezon\Gentella\Tests\Selenium;
 
 use Mezon\Selenium\PersistentTools;
-use Facebook\WebDriver\WebDriverBy;
 
+/**
+ *
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 class LoginTest extends PersistentTools
 {
     

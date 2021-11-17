@@ -4,13 +4,17 @@ namespace Mezon\Gentella\Tests\Unit;
 use PHPUnit\Framework\TestCase;
 use Mezon\Gentella\GentellaTemplate;
 
+/**
+ *
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 class GentellaTemplateUnitTest extends TestCase
 {
 
     /**
      * Testing message content.
      */
-    public function testSuccessMessageContent()
+    public function testSuccessMessageContent(): void
     {
         $str1 = GentellaTemplate::successMessageContent('msg');
         $str2 = '<div class="alert alert-success alert-dismissible fade in show" role="alert">' .
@@ -23,7 +27,7 @@ class GentellaTemplateUnitTest extends TestCase
     /**
      * Testing message content.
      */
-    public function testWarningMessageContent()
+    public function testWarningMessageContent(): void
     {
         $str1 = GentellaTemplate::warningMessageContent('msg');
         $str2 = '<div class="alert alert-warning alert-dismissible fade in show" role="alert">' .
@@ -36,7 +40,7 @@ class GentellaTemplateUnitTest extends TestCase
     /**
      * Testing message content.
      */
-    public function testInfoMessageContent()
+    public function testInfoMessageContent(): void
     {
         $str1 = GentellaTemplate::infoMessageContent('msg');
         $str2 = '<div class="alert alert-info alert-dismissible fade in show" role="alert">' .
@@ -49,7 +53,7 @@ class GentellaTemplateUnitTest extends TestCase
     /**
      * Testing message content.
      */
-    public function testDangerMessageContent()
+    public function testDangerMessageContent(): void
     {
         $str1 = GentellaTemplate::dangerMessageContent('msg');
         $str2 = '<div class="alert alert-danger alert-dismissible fade in show" role="alert">' .

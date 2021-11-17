@@ -3,6 +3,10 @@ namespace Mezon\Gentella\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * 
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 class ViewTestBase extends TestCase
 {
 

@@ -4,6 +4,10 @@ namespace Mezon\Gentella\Tests\Unit;
 use Mezon\Gentella\Views\Login;
 use Mezon\Gentella\GentellaTemplate;
 
+/**
+ *
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 class LoginUnitTest extends ViewTestBase
 {
 

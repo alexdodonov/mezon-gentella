@@ -19,7 +19,8 @@
 		"php": ">=7.2.0",
 		"mezon/html-template": "1.1.*",
 		"mezon/view": "1.1.*",
-		"mezon/conf": "1.0.*"
+		"mezon/conf": "1.2.*",
+		"mezon/pdocrud": "1.5.*"
 	},
 	"support": {
 		"email": "alexey@dodonov.pro",
@@ -36,6 +37,7 @@
 	},
 	"scripts": {
 		"test": "php ./vendor/phpunit/phpunit/phpunit --testsuit all --order-by=random",
-		"psalm": "php ./vendor/vimeo/psalm/psalm --show-info=true --no-cache"
+		"psalm": "php ./vendor/vimeo/psalm/psalm --show-info=true --no-cache",
+		"psalm-self": "php ./vendor/vimeo/psalm/psalm --config=psalm-self.xml --show-info=true --no-cache"
 	}
 }

@@ -4,6 +4,10 @@ namespace Mezon\Gentella\Tests\Unit;
 use Mezon\Gentella\GentellaTemplate;
 use Mezon\Gentella\Views\PasswordRestoration;
 
+/**
+ *
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 class PasswordRestorationUnitTest extends ViewTestBase
 {
 

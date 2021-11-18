@@ -73,7 +73,7 @@ class GentellaTemplateUnitTest extends TestCase
 
         // assertions
         $this->assertEquals('', $template->getPageVar('action'));
-        $this->assertEquals(1, $template->getPageVar('show-registration-link'));
-        $this->assertEquals(1, $template->getPageVar('show-restore-password-link'));
+        $this->assertEquals('', $template->getPageVar('show-registration-link'));
+        $this->assertEquals('', $template->getPageVar('show-restore-password-link'));
     }
 }

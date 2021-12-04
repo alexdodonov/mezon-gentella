@@ -70,6 +70,10 @@ class LoginUnitTest extends ViewTestBase
     {
         // setup
         $template = new GentellaTemplate();
+        $template->addPaths([
+            __DIR__ . '/../../Res/'
+        ]);
+
         $view = new Login($template);
         $view->setErrorMessage($message);
 

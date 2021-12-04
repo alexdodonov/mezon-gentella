@@ -7,7 +7,7 @@
 				<section class="login_content">
 					<form id="restore-form" action="./" method="post">
 						<h1>Восстановление<br>пароля</h1>
-						{message}
+						{action-message}
 
 						<div class="separator">
 							<p class="change_link">

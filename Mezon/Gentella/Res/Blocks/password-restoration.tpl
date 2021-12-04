@@ -7,7 +7,7 @@
 				<section class="login_content">
 					<form id="restore-form" action="./" method="post">
 						<h1>Восстановление<br>пароля</h1>
-						{message}
+						{action-message}
 						<div>
 							<input type="text" class="form-control" placeholder="Email"
 								value="{login}" name="login" />

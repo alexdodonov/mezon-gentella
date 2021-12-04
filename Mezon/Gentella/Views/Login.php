@@ -48,19 +48,9 @@ class Login extends ViewStatic
 
         switch ($errorMessage) {
             case ('user-does-not-exist'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::dangerMessageContent('Пользователь не существует'));
-                break;
             case ('invalid-password'):
-                $this->getTemplate()->setPageVar(
-                'message',
-                GentellaTemplate::dangerMessageContent('Неправильный пароль'));
-                break;
             case ('all-fields-must-be-filled'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::dangerMessageContent('Все поля должны быть заполнены'));
+                $this->getTemplate()->setErrorMessage($errorMessage);
                 break;
             default:
                 break;

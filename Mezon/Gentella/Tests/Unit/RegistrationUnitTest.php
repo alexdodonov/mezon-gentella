@@ -87,6 +87,10 @@ class RegistrationUnitTest extends ViewTestBase
     {
         // setup
         $template = new GentellaTemplate();
+        $template->addPaths([
+            __DIR__ . '/../../Res/'
+        ]);
+
         $view = new Registration($template);
         $view->setErrorMessage($message);
 

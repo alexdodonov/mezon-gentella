@@ -73,6 +73,10 @@ class PasswordRestorationUnitTest extends ViewTestBase
     {
         // setup
         $template = new GentellaTemplate();
+        $template->addPaths([
+            __DIR__ . '/../../Res/'
+        ]);
+
         $view = new PasswordRestoration($template);
         $view->setErrorMessage($message);
 

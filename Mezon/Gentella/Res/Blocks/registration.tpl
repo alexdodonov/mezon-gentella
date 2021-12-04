@@ -7,7 +7,7 @@
 				<section class="login_content">
 					<form method="post" action="" id="reg-form">
 						<h1>Регистрация</h1>
-						{message}
+						{action-message}
 						<div>
 							<input type="text" class="form-control" placeholder="Email или телефон"
 								value="{login}" name="login" />

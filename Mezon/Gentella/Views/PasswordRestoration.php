@@ -46,19 +46,11 @@ class PasswordRestoration extends ViewStatic
 
         switch ($errorMessage) {
             case ('user-does-not-exist'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::dangerMessageContent('Пользователь не существует'));
-                break;
             case ('email-not-set'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::dangerMessageContent('Заполните поле "Email"!'));
+                $this->getTemplate()->setErrorMessage($errorMessage);
                 break;
             case ('check-your-email'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::successMessageContent('Проверьте свою почту!'));
+                $this->getTemplate()->setSuccessMessage($errorMessage);
                 break;
             default:
                 break;

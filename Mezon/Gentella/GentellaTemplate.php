@@ -53,7 +53,7 @@ class GentellaTemplate extends HtmlTemplate
      *            Message
      * @return string Message block markup
      */
-    protected static function getMessageContent(string $msgType, string $message): string
+    private static function getMessageContent(string $msgType, string $message): string
     {
         return TemplateEngine::printRecord(
             file_get_contents(__DIR__ . '/Res/Templates/message.tpl'),
@@ -68,6 +68,8 @@ class GentellaTemplate extends HtmlTemplate
      *
      * @param string $message
      *            Message to be compiled
+     * @deprecated
+     * @codeCoverageIgnore
      */
     public static function successMessageContent(string $message): string
     {
@@ -79,6 +81,8 @@ class GentellaTemplate extends HtmlTemplate
      *
      * @param string $message
      *            Message to be compiled
+     * @deprecated
+     * @codeCoverageIgnore
      */
     public static function infoMessageContent(string $message): string
     {
@@ -90,6 +94,8 @@ class GentellaTemplate extends HtmlTemplate
      *
      * @param string $message
      *            Message to be compiled
+     * @deprecated
+     * @codeCoverageIgnore
      */
     public static function warningMessageContent(string $message): string
     {
@@ -101,9 +107,35 @@ class GentellaTemplate extends HtmlTemplate
      *
      * @param string $message
      *            Message to be compiled
+     * @deprecated
+     * @codeCoverageIgnore
      */
     public static function dangerMessageContent(string $message): string
     {
         return self::getMessageContent('alert-danger', $message);
+    }
+
+    /**
+     * Method sets success action message
+     *
+     * @param string $successMessage
+     *            success message
+     * @return string compiled success message
+     */
+    protected function getSuccessMessageContent(string $successMessage): string
+    {
+        return self::getMessageContent('alert-success', $successMessage);
+    }
+
+    /**
+     * Method sets error action message
+     *
+     * @param string $errorMessage
+     *            error meddage
+     * @return string compiled error message
+     */
+    protected function getErrorMessageContent(string $errorMessage): string
+    {
+        return self::getMessageContent('alert-danger', $errorMessage);
     }
 }

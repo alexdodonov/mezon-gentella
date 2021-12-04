@@ -7,7 +7,7 @@
 				<section class="login_content">
 					<form id="login-form" action="" method="post">
 						<h1>Вход в систему</h1>
-						{message}
+						{action-message}
 						<div>
 							<input type="text" class="form-control" placeholder="Логин"
 								value="{login}" name="login" />

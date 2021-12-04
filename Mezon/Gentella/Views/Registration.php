@@ -44,35 +44,15 @@ class Registration extends ViewStatic
     {
         parent::setErrorMessage($errorMessage);
 
-        // TODO store strings in text files error-messages.json, success-messages.json, or look ...
-        // in what files CommonApplication stores it and may be int this place we shoud use these files
         switch ($errorMessage) {
             case ('passwords-not-match'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::dangerMessageContent('Пароли должны совпадать'));
-                break;
             case ('user-exists'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::dangerMessageContent('Пользователь существует'));
-                break;
             case ('all-fields-must-be-filled'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::dangerMessageContent('Все поля должны быть заполнены'));
-                break;
             case ('invalid-login-was-submitted-wile-registration'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::dangerMessageContent(
-                        'В качество логина можно использовать только email или телефон'));
+                $this->getTemplate()->setErrorMessage($errorMessage);
                 break;
             case ('user-was-created-authorize'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::successMessageContent(
-                        'Регистрация прошла успешно. Теперь Вы можете авторизоваться'));
+                $this->getTemplate()->setSuccessMessage($errorMessage);
                 break;
             default:
                 break;

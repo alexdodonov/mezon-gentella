@@ -56,7 +56,7 @@ class PasswordRestorationCompleteUnitTest extends ViewTestBase
                 }
             ],
             [
-                'check-your-email',
+                'check-your-email-for-new-password',
                 function (string $result) {
                     $this->assertPasswordRestorationCompleteOutput(
                         $result,
@@ -76,6 +76,10 @@ class PasswordRestorationCompleteUnitTest extends ViewTestBase
     {
         // setup
         $template = new GentellaTemplate();
+        $template->addPaths([
+            __DIR__ . '/../../Res/'
+        ]);
+
         $view = new PasswordRestorationComplete($template);
         $view->setErrorMessage($message);
 

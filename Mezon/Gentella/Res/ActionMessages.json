@@ -1,0 +1,14 @@
+{
+	"token-not-found": "Токен не найден",
+	"token-not-set": "Токен не указан",
+	"check-your-email-for-new-password": "Ваш новый пароль придёт Вам на почту!",
+	"user-does-not-exist": "Пользователь не существует",
+	"invalid-password": "Неправильный пароль",
+	"all-fields-must-be-filled": "Все поля должны быть заполнены",
+	"check-your-email": "Проверьте свою почту!",
+	"user-exists": "Пользователь существует",
+	"invalid-login-was-submitted-wile-registration": "В качество логина можно использовать только email или телефон",
+	"user-was-created-authorize": "Регистрация прошла успешно. Теперь Вы можете авторизоваться",
+	"email-not-set": "Заполните поле \"Email\"!",
+	"passwords-not-match": "Пароли должны совпадать"
+}

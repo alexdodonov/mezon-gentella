@@ -13,11 +13,12 @@
 	"require-dev": {
 		"phpunit/phpunit": "8.5",
         "vimeo/psalm": "^4.2",
-		"mezon/selenium-low-level-tools": "1.2.*"
+		"mezon/selenium-low-level-tools": "1.2.*",
+		"infection/infection": "^0.21.5"
 	},
 	"require": {
 		"php": ">=7.2.0",
-		"mezon/html-template": "1.1.*",
+		"mezon/html-template": ">=1.1.9 <1.2.0",
 		"mezon/view": "1.1.*",
 		"mezon/conf": "1.2.*",
 		"mezon/pdocrud": "1.5.*"
@@ -38,6 +39,7 @@
 	"scripts": {
 		"test": "php ./vendor/phpunit/phpunit/phpunit --testsuit all --order-by=random",
 		"psalm": "php ./vendor/vimeo/psalm/psalm --show-info=true --no-cache",
-		"psalm-self": "php ./vendor/vimeo/psalm/psalm --config=psalm-self.xml --show-info=true --no-cache"
+		"psalm-self": "php ./vendor/vimeo/psalm/psalm --config=psalm-self.xml --show-info=true --no-cache",
+		"infection": "php ./vendor/infection/infection/bin/infection --threads=4 --min-msi=84"
 	}
 }

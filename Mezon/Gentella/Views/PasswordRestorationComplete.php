@@ -46,15 +46,11 @@ class PasswordRestorationComplete extends ViewStatic
 
         switch ($errorMessage) {
             case ('token-not-set'):
-                $this->getTemplate()->setPageVar('message', GentellaTemplate::dangerMessageContent('Токен не указан'));
-                break;
             case ('token-not-found'):
-                $this->getTemplate()->setPageVar('message', GentellaTemplate::dangerMessageContent('Токен не найден'));
+                $this->getTemplate()->setErrorMessage($errorMessage);
                 break;
-            case ('check-your-email'):
-                $this->getTemplate()->setPageVar(
-                    'message',
-                    GentellaTemplate::successMessageContent('Ваш новый пароль придёт Вам на почту!'));
+            case ('check-your-email-for-new-password'):
+                $this->getTemplate()->setSuccessMessage($errorMessage);
                 break;
             default:
                 break;

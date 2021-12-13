@@ -19,7 +19,7 @@
 	"require": {
 		"php": ">=7.2.0",
 		"mezon/html-template": ">=1.1.9 <1.2.0",
-		"mezon/view": "1.1.*",
+		"mezon/view": "1.2.*",
 		"mezon/conf": "1.2.*",
 		"mezon/pdocrud": "1.5.*"
 	},

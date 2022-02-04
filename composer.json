@@ -41,5 +41,8 @@
 		"psalm": "php ./vendor/vimeo/psalm/psalm --show-info=true --no-cache",
 		"psalm-self": "php ./vendor/vimeo/psalm/psalm --config=psalm-self.xml --show-info=true --no-cache",
 		"infection": "php ./vendor/infection/infection/bin/infection --threads=4 --min-msi=84"
+	},
+	"config": {
+		"process-timeout": 0
 	}
 }

@@ -10,5 +10,6 @@
 	"invalid-login-was-submitted-wile-registration": "В качество логина можно использовать только email или телефон",
 	"user-was-created-authorize": "Регистрация прошла успешно. Теперь Вы можете авторизоваться",
 	"email-not-set": "Заполните поле \"Email\"!",
-	"passwords-not-match": "Пароли должны совпадать"
+	"passwords-not-match": "Пароли должны совпадать",
+	"you-have-registered-successfully": "Вы успешно зарегистрировались"
 }

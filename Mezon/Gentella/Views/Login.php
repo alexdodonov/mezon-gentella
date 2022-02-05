@@ -14,13 +14,13 @@ use Mezon\ViewBase;
  * @subpackage Login
  * @author Dodonov A.A.
  * @version v.1.0 (2020/08/27)
- * @copyright Copyright (c) 2020, aeon.org
+ * @copyright Copyright (c) 2020, http://aeon.su
  */
 
 /**
  * View class
  */
-class Login extends ViewStatic
+class Login extends GentellaView
 {
 
     /**
@@ -34,25 +34,5 @@ class Login extends ViewStatic
     public function __construct(HtmlTemplate $template)
     {
         parent::__construct($template, 'login');
-    }
-
-    /**
-     *
-     * {@inheritdoc}
-     * @see ViewBase::setErrorMessage()
-     */
-    public function setErrorMessage(string $errorMessage): void
-    {
-        parent::setErrorMessage($errorMessage);
-
-        switch ($errorMessage) {
-            case ('user-does-not-exist'):
-            case ('invalid-password'):
-            case ('all-fields-must-be-filled'):
-                $this->getTemplate()->setErrorMessage($errorMessage);
-                break;
-            default:
-                break;
-        }
     }
 }

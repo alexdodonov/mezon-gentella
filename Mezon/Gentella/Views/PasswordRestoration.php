@@ -12,13 +12,13 @@ use Mezon\ViewBase;
  * @subpackage Registration
  * @author Dodonov A.A.
  * @version v.1.0 (2020/08/27)
- * @copyright Copyright (c) 2020, aeon.org
+ * @copyright Copyright (c) 2020, http://aeon.su
  */
 
 /**
  * View class
  */
-class PasswordRestoration extends ViewStatic
+class PasswordRestoration extends GentellaView
 {
 
     /**
@@ -32,27 +32,5 @@ class PasswordRestoration extends ViewStatic
     public function __construct(HtmlTemplate $template)
     {
         parent::__construct($template, 'password-restoration');
-    }
-
-    /**
-     *
-     * {@inheritdoc}
-     * @see ViewBase::setErrorMessage()
-     */
-    public function setErrorMessage(string $errorMessage): void
-    {
-        parent::setErrorMessage($errorMessage);
-
-        switch ($errorMessage) {
-            case ('user-does-not-exist'):
-            case ('email-not-set'):
-                $this->getTemplate()->setErrorMessage($errorMessage);
-                break;
-            case ('check-your-email'):
-                $this->getTemplate()->setSuccessMessage($errorMessage);
-                break;
-            default:
-                break;
-        }
     }
 }

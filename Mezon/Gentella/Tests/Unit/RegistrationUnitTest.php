@@ -92,7 +92,11 @@ class RegistrationUnitTest extends ViewTestBase
         ]);
 
         $view = new Registration($template);
-        $view->setErrorMessage($message);
+        if ($message === 'user-was-created-authorize') {
+            $view->setSuccessMessage($message);
+        } else {
+            $view->setErrorMessage($message);
+        }
 
         // test body
         $result = $view->render();

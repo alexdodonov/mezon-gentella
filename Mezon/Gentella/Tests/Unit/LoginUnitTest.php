@@ -57,6 +57,13 @@ class LoginUnitTest extends ViewTestBase
                 function (string $result) {
                     $this->assertLoginOutput($result, 'Все поля должны быть заполнены');
                 }
+            ],
+            [
+                // testing that parent setErrorMessage is called
+                'only-email-and-phones-are-available',
+                function (string $result) {
+                    $this->assertLoginOutput($result, 'В качестве логина можно использовать только email или телефон');
+                }
             ]
         ];
     }

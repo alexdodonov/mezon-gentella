@@ -78,7 +78,11 @@ class PasswordRestorationUnitTest extends ViewTestBase
         ]);
 
         $view = new PasswordRestoration($template);
-        $view->setErrorMessage($message);
+        if ($message === 'check-your-email') {
+            $view->setSuccessMessage($message);
+        } else {
+            $view->setErrorMessage($message);
+        }
 
         // test body
         $result = $view->render();

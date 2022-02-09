@@ -12,5 +12,6 @@
 	"email-not-set": "Заполните поле \"Email\"!",
 	"passwords-not-match": "Пароли должны совпадать",
 	"you-have-registered-successfully": "Вы успешно зарегистрировались",
-	"only-email-and-phones-are-available": "В качестве логина можно использовать только email или телефон"
+	"only-email-and-phones-are-available": "В качестве логина можно использовать только email или телефон",
+	"user-was-deleted": "Пользователь был удален"
 }

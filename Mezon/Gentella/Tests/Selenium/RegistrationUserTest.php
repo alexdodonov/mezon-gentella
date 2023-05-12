@@ -2,9 +2,7 @@
 namespace Mezon\Gentella\Tests\Selenium;
 
 use Mezon\Selenium\PersistentTools;
-use Mezon\PdoCrud\ConnectionTrait;
 use Mezon\Conf\Conf;
-use Enterprize\Auth\AuthModel;
 
 /**
  *
@@ -13,7 +11,7 @@ use Enterprize\Auth\AuthModel;
 class RegistrationUserTest extends PersistentTools
 {
 
-    use ConnectionTrait, LoginLogoutTrait;
+    use LoginLogoutTrait;
 
     /**
      * Testing user registration

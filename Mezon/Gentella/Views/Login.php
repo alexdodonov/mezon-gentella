@@ -2,8 +2,6 @@
 namespace Mezon\Gentella\Views;
 
 use Mezon\HtmlTemplate\HtmlTemplate;
-use Mezon\ViewStatic;
-use Mezon\ViewBase;
 
 // TODO use 403 template for CabApplication::403 page
 

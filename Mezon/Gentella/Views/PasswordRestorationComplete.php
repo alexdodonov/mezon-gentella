@@ -2,8 +2,6 @@
 namespace Mezon\Gentella\Views;
 
 use Mezon\HtmlTemplate\HtmlTemplate;
-use Mezon\ViewStatic;
-use Mezon\ViewBase;
 
 /**
  * Class PasswordRestoration
